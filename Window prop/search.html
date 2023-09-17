@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="para">plz like vedio</p>
+    <p class="para">plz like vedio</p>
+    <p>Dont subscribe the channel</p>
+    <h1 id="heading">Changed content of h1</h1>
+
+    <form action="">
+        <label for="">male</label>
+        <input type="radio" name="gender" id="">
+        <label for="">female</label>
+        <input type="radio" name="gender" id="">
+        <label for="">other</label>
+        <input type="radio" name="gender" id="">
+    </form>
+    <br><br>
+
+    <button onclick="changeContent()"> click me</button>
+
+    <script>
+        const changeContent=()=>{
+        //     document.getElementById('heading').innerHTML ="welcome to thapa technical"
+
+        // const headingchange = document.getElementById('heading');
+        // headingchange.innerHTML ="welcome to tpa";
+
+        // console.log(document.getElementsByClassName('para'));
+        // console.log(document.getElementsByTagName('p'));
+        
+        // console.log(document.getElementsByName('gender'));
+
+        document.querySelector('#heading').innerHTML = "i am changed again";
+
+        console.log( document.querySelector('.para'));
+        // querySelector return first match return krta hai querySelectorAll return  all matches
+        console.log( document.querySelectorAll('.para'));
+  
+
+        }
+
+    </script>
+</body>
+</html> 
