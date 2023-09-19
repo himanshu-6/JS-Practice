@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Diffrent type of events in JS</h1>
+
+        <div class="button_su">
+            <span class="su_button_circle">
+            </span>
+            <a href="#" class="button_su_inner" onclick="alert('I am Awesome but no one usese me')">
+            <span class="button_text_container">
+                simple inline alert()
+            </span>
+            </a>
+        </div>
+        
+        <br><br>
+        
+         <div class="button_su">
+            <span>
+                <a href="#" class="button_inner" onclick="callingFunction()">
+                    <span>
+                        by calling function
+                    </span>
+                </a>
+            </span>
+        </div>
+
+        <br><br>
+
+        <div class="button_su">
+            <span>
+                <a href="#" class="button_inner" id="thirdway">
+                    <span>
+                        inline event
+                    </span>
+                </a>
+            </span>
+        </div>
+
+        <br><br>
+
+        <div class="button_su">
+                <a href="#" class="button_inner" id="fourthway">
+                    <span>
+                        Event Listener
+                    </span>
+                </a>
+        </div>
+
+    </div>
+
+
+    <script>
+        const callingFunction =() =>{
+            alert('most common way of writing a function')
+        }
+ 
+        //  yha bus ik print hoga jo ki last hoga
+        const thirdway= document.getElementById('thirdway');
+        thirdway.onclick = function (){
+            alert('most common way of writing a function again')
+        }
+        thirdway.onclick = function (){
+            console.log(('most common way of writing a function again'));
+        }
+
+
+        // yha dono print hoga
+        const fourthway = document.querySelector('#fouthway');
+
+        fourthway.addEventListener('click' , ()=>{
+            alert('i love this way as event listener');
+        })
+
+        fourthway.addEventListener('click' , ()=>{
+            console.log('i love this way as event listener');
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <p>I AM a Counter </p>
+            <br>
+            <button id="btn">  Click   to strt    </button> 
+            <button id="btn1"> Click to stop </button>
+        </div>
+    </div>
+
+    <script>
+        const stopName = document.querySelector('p');
+        const button = document.querySelector('#btn');
+        const stopintvl = document.querySelector('#btn1');
+        let num = 0;
+        let timeref;
+        const show = ()=>{
+            stopName.innerHTML = "Loading....";
+            setInterval(()=>{
+                stopName.innerHTML = `${num}`;
+                num++;
+            },1000)
+        };
+        button.addEventListener('click',show);
+
+        stopintvl.addEventListener('click' ,()=>{
+            clearInterval(timeref);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="en">
+       <head>
+         <meta charset="UTF-8" />
+         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <title>Document</title>
+       </head>
+       <body>
+         <div class="container">
+             <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+             itaque laudantium nemo veniam quaerat est ipsum reiciendis, ut ducimus
+             repellendus corrupti odit quia quos asperiores maiores perspiciatis.
+             Sed, veritatis quidem.
+             </p>
+    
+        <div id="box" style="background-color: yellow; height: 50px; width: 50px">
+            </div> 
+         </div>
+    
+         <script>
+           function mouseUp() {
+             document.getElementById("myP").style.color = "violet";
+           }
+           function mouseDown() {
+             document.getElementById("myP").style.color = "red"; // while clicking on the text it become red
+           }
+           const mouse = document.getElementById("box");
+    
+           mouse.addEventListener("mouseenter", () => {
+             mouse.style.backgroundColor = "red";
+             console.log("Mouse enter");
+           });
+    
+           mouse.addEventListener("mouseleave", () => {
+             mouse.style.backgroundColor = "pink";
+             console.log("Mouse leave");
+           });
+         </script>
+       </body>
+     </html> 
+    

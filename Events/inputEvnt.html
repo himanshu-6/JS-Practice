@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <div class="container">
+        <label for=""> HIMANSHU Maurya</label>
+        <input type="text" id="text"><br>
+
+        <label for="">Choose an Icecream
+            <select name="iceCream" id="iceCream" onchange="selectElement()">
+                    <option value="">Select one...</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="ButterScotch">ButterScotch</option>
+                    <option value="Vanila">Vanila</option>
+            </select>
+        </label>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const selectElement = () =>{
+            const text = document.getElementById('text').value;
+            const iceCream = document.getElementById('iceCream').value;
+            const result = document.getElementById('result');
+
+            result.innerHTML = (`Mr ${text} select ${iceCream} flavour`)
+
+            // console.log(`${text} and ${iceCream}`);
+
+        };
+    </script>
+        
+    </body>
+</html>
